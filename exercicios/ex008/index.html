@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Númeors com JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button {
+            font-size: 18px;
+            padding: 30px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Vários cálculos em JavaScript</h1>
+    <button onclick="calcular()">Clique para calcular</button>
+    <section id="result">
+        <p>O resultado vai aparecer aqui...</p>
+    </section>
+
+
+    <script>
+        function calcular() {
+            let n1 = Number(window.prompt('Digite um número:'))
+
+            let res = document.querySelector('section#result')
+
+        res.innerHTML = `<p>O número a ser analisado aqui será o <strong>${n1}</strong>!</p><hr>`
+
+        res.innerHTML += `<p>O seu valor absoluto é <strong>${Math.abs(n1)}</strong>`
+        
+        res.innerHTML += `<p>A sua parte inteira é <strong>${Math.trunc(n1)}</strong></p>`
+
+        res.innerHTML += `<p>O valor inteiro mais próximo é <strong>${Math.round(n1)}</strong></p>`
+
+        res.innerHTML += `<p>A sua raiz quadrada é <strong>${Math.sqrt(n1)}</strong></p>`
+
+        res.innerHTML += `<p>A sua raiz cúbica é <strong>${Math.cbrt(n1)}</strong></p>`
+
+        res.innerHTML += `<p>O valor de <strong>${n1}</strong><sup>2</sup> é <strong>${Math.pow(n1, 2)}</strong></p>`
+
+        res.innerHTML += `<p>O valor de <strong>${n1}</strong><sup>3</sup> é <strong>${Math.pow(n1, 3)}</strong></p>`
+
+        }
+    </script>
+    
+</body>
+</html>
