@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio007</title>
+    <style>
+        body {
+            font: 18px sans-serif;
+        }
+
+        button {
+            padding: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Conversor R$ &rarr; US$</h1>
+
+    <button onclick="convert()">Converter</button>
+
+    <section id="result">
+        <p>Clique no botão acima para iniciar.</p>
+    </section>
+
+    <script>
+        let dol = Number(window.prompt('Antes de mais nada. Quanto está a cotação do dólar agora?'))
+
+        function convert() {
+            let wal = Number(window.prompt('Quantos R$ você tem na carteira?'))
+
+            let res = document.querySelector('section#result')
+
+            let con = wal/dol
+            let conCur = con.toLocaleString("en-US", {style:"currency", currency:"USD"})
+
+            res.innerHTML = `<p>Você vai conseguir ${conCur} com o que tem na carteira.</p>`
+        }
+    </script>
+</body>
+
+</html>

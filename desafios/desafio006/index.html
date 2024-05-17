@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio006</title>
+    <style>
+        body {
+            font: 18px arial;
+        }
+
+        button {
+            padding: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor de Temperaturas</h1>
+
+    <button onclick="conv()">Converter</button>
+
+    <section id="result">
+        <p>Clique no botão acima para iniciar.</p>
+    </section>
+
+    <script>
+        function conv() {
+            let num = Number(window.prompt('Digite uma tempoeratura em °C (Celcius)'))
+
+            let res = document.querySelector('section#result')
+
+            res.innerHTML = `<h2>A temperatura de ${num}°C, corresponde a:</h2>`
+
+            res.innerHTML += `<p>${num+273.15}°K (Kelvin)</p>`
+
+            res.innerHTML += `<p>${num*(9/5)+32}°F</p>`
+        }
+    </script>
+</body>
+</html>

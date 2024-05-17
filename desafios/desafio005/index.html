@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 005</title>
+    <style>
+        body {
+            font: 18px arial;
+        }
+
+        button {
+            padding: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Conversor de medidas</h1>
+    
+    <button onclick="conv()">Converter</button>
+
+    <section id="result">
+        <p>Clique no botão acima para iniciar.</p>
+    </section>
+
+    <script>
+        function conv() {
+            let num = Number(window.prompt('Digite uma distância em metros (m)'))
+
+            let res = document.querySelector('section#result')
+
+        res.innerHTML = `<h2><strong>A distância de ${num} metros, corresponde a:</strong></h2>`
+
+        res.innerHTML += `${num/1000} quilômetros (Km)<br><br>`
+
+        res.innerHTML += `${num/100} hectômetros (Hm)<br><br>`
+
+        res.innerHTML += `${num/10} decâmetros (Dam)<br><br>`
+
+        res.innerHTML += `${num*10} decimetros (dm)<br><br>`
+
+        res.innerHTML += `${num*100} centímetros (cm)<br><br>`
+
+        res.innerHTML += `${num*1000} milímetros (mm)<br><br>`
+        }
+    </script>
+</body>
+
+</html>
