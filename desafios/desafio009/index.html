@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio009</title>
+    <style>
+        body {
+            font: 18px sans-serif;
+        }
+
+        button {
+            padding: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Reajuste salarial</h1>
+
+    <button onclick="sal()">Reajustar Salário</button>
+
+    <section id="result">
+        <p>Clique no boão acima para iniciar.</p>
+    </section>
+
+    <script>
+        function sal() {
+            let nom = window.prompt('Qual é o nome do funcionário?')
+
+            let sal = Number(window.prompt(`Qual é o salário de ${nom}?`))
+            let salCur = sal.toLocaleString("pt-BR", {style:"currency", currency:"BRL"})
+
+            let por = Number(window.prompt(`O salário de ${nom} vai ser reajustado em qual porcentagem?`))
+
+            let aum = (sal*por)/100
+            let aumCur = aum.toLocaleString("pt-BR", {style:"currency", currency:"BRL"})
+
+            let nsal = sal+aum
+            let nsalCur = nsal.toLocaleString("pt-BR", {style:"currency", currency:"BRL"})
+
+
+            let res = document.querySelector('section#result')
+
+            res.innerHTML = `<h2>${nom} recebeu um aumento salarial!</h2>`
+
+            res.innerHTML += `<p>O salário era ${salCur}.</p>`
+
+            res.innerHTML += `<p>Com um aumento de ${por}%, o salário vai aumentar ${aumCur}.</p>`
+
+            res.innerHTML += `<p>E a partir daí, ${nom} vai passar a ganhar ${nsalCur}.</p>`
+
+        }
+    </script>
+</body>
+
+</html>

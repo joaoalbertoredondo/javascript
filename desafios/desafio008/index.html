@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio008</title>
+    <style>
+        body {
+            font: 18px sans-serif;
+        }
+
+        button {
+            padding: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Calcular Desconto</h1>
+
+    <button onclick="des()">Desconto de 10%</button>
+
+    <section id="result">
+        <p>Clique no boão acima para iniciar.</p>
+    </section>
+
+    <script>
+        function des() {
+            let prod = window.prompt('Qual é o produto que está comprando?')
+
+            let pri = Number(window.prompt(`Qual é o preço de ${prod}?`))
+            let priCur = pri.toLocaleString("pt-BR", {style:"currency", currency:"BRL"})
+
+            let des = (pri*10)/100
+            let desCur = des.toLocaleString("pt-BR", {style:"currency", currency:"BRL"})
+
+            let fpri = (pri*90)/100
+            let fpriCur = fpri.toLocaleString("pt-BR", {style:"currency", currency:"BRL"})
+
+
+            let res = document.querySelector('section#result')
+
+            res.innerHTML = `<h2>Calculando desconto de 10% para ${prod}:</h2>`
+
+            res.innerHTML += `<p>O preço original era ${priCur}.</p>`
+
+            res.innerHTML += `<p>Você acaba de ganhar ${desCur} de desconto (-10%).</p>`
+
+            res.innerHTML += `<p>No fim, você vai pagar ${fpriCur} no produto ${prod}.</p>`
+        }
+    </script>
+</body>
+
+</html>
