@@ -1,0 +1,18 @@
+body {
+    font: normal 18px arial;
+}
+
+input {
+    padding: 20px;
+    font-size: 18px;
+}
+
+.red {
+    background-color: #f85c83;
+    color: darkred;
+}
+
+.green {
+    background-color: #2fd180;
+    color: darkgreen;
+}
