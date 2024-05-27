@@ -1,19 +1,50 @@
 body {
     font: normal 18px arial;
-    background-image: linear-gradient(to bottom, #04003a, rgb(4, 111, 153));
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     overflow: hidden;
+    background-image: linear-gradient(to bottom, #04003a, rgb(4, 111, 153));
 }
 
-div {
+h1 {
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.397);
+}
+
+.container {
     display: flex;
-    background-color: rgb(185, 209, 209);
+    flex-direction: column;
+    background-color: #bec5c5;
     color: #04003a;
     width: 500px;
-    border-radius: 20px;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.568);
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px #00000091;
     margin: auto;
+    margin-top: 150px;
+    padding: 20px;
+}
+
+input[type=button] {
+    display: block;
     padding: 10px;
-    justify-content: center;
+    font-size: 20px;
+    width: 200px;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 5px;
+    background-image: linear-gradient(to bottom, #04003a, rgb(7, 85, 116));
+    color: white;
+    border: none;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.404);
+    cursor: pointer;
+}
+
+input[type=button]:hover {
+    background-image: linear-gradient(to bottom, #03011d, rgb(4, 67, 92));
+    color: lightgray;
+}
+
+input[type=button]:active {
+    opacity: .8;
+    transform: translateY(3px);
 }

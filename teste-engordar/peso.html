@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste peso</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Diferença de peso</h1>
+        <div>
+            <p>Nome: <input type="text" name="nome" id="nome" onkeyup="habilitar()"></p>
+            <p>Sexo:
+                <input type="radio" name="sexo" id="masc" checked>
+                <label for="masc">Masculino</label>
+                <input type="radio" name="sexo" id="fem">
+                <label for="fem">Feminino</label>
+            </p>
+            <p>Peso inicial: <input type="number" name="pesoin" id="pesoin"></p>
+            <p>Peso final: <input type="number" name="pesofin" id="pesofin"></p>
+            <p><input type="button" value="Verificar" onclick="verify()" id="button"></p>
+
+        </div>
+        <div id="result">
+
+        </div>
+    </div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
