@@ -8,8 +8,12 @@ function greeting() {
     console.log(`Hello, ${person.firstName}`)
 }
 
-console.log(greeting())
+greeting()
 
-function incAge() {
-    
+function incAge(num) {
+    person.age+=num
 }
+
+console.log(person.age)
+incAge(10)
+console.log(person.age)
