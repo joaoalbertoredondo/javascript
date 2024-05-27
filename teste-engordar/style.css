@@ -1,0 +1,19 @@
+body {
+    font: normal 18px arial;
+    background-image: linear-gradient(to bottom, #04003a, rgb(4, 111, 153));
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+div {
+    display: flex;
+    background-color: rgb(185, 209, 209);
+    color: #04003a;
+    width: 500px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.568);
+    margin: auto;
+    padding: 10px;
+    justify-content: center;
+}
